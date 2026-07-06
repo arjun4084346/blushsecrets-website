@@ -66,7 +66,7 @@
     <a href="updates.html" class="link">Updates</a>
     <a href="contact.html" class="link">Contact</a>
     <a href="https://book.squareup.com/appointments/tynpor0v3xbdkt/location/LRH6GHQ8Q1H54" class="book desktop">Book Online</a>
-    <button class="menu-toggle" aria-label="Menu" onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
+    <button class="menu-toggle" aria-label="Menu" aria-controls="nav" aria-expanded="false" onclick="var n=document.getElementById('nav'); n.classList.toggle('open'); this.setAttribute('aria-expanded', n.classList.contains('open'));">☰</button>
   </nav>
 </header>
 
@@ -102,18 +102,11 @@
 
   <h2 class="section-title" style="margin-top:64px;">Reviews</h2>
   <p class="section-sub">Rated 5.0 from 70+ happy clients on Google</p>
-  <!-- ============================================================
-       TRUSTINDEX GOOGLE REVIEWS WIDGET (free)
-       1. Sign up at https://www.trustindex.io (free plan).
-       2. Connect Richa's Google Business Profile
-          (search "Blush Secrets" / "Eyebrow Threading & Makeup", Mountain View, CA).
-       3. Build a "Google Reviews" widget, copy the <script> tag it gives you.
-       4. Paste that <script> tag on the blank line inside the div below.
-       (Leaving it empty is fine — the section just stays blank until you add it.)
-       ============================================================ -->
-  <div id="trustindex-reviews" style="min-height:220px;">
-    <!-- paste Trustindex script tag here -->
-  </div>
+  <!-- Trustindex Google Reviews widget goes here once installed — paste its
+       <script> tag (inside a plain <div>) between this comment and the button
+       below. Setup steps are in README.md under "Google reviews widget".
+       (The old empty min-height:220px placeholder div was removed because it
+       rendered as a permanent blank gap.) -->
   <p style="text-align:center; margin-top:16px;">
     <a class="btn outline" href="https://share.google/nI614uqtiZaemlfVc">Read all reviews on Google</a>
   </p>

@@ -5,6 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Services & Prices — Blush Secrets</title>
 <meta name="description" content="Blush Secrets price list: event makeup, wedding makeup, eyebrow threading, henna and more in Mountain View, CA." />
+<meta property="og:title" content="Services &amp; Prices — Blush Secrets" />
+<meta property="og:description" content="Blush Secrets price list: event makeup, wedding makeup, eyebrow threading, henna and more in Mountain View, CA." />
+<meta property="og:image" content="https://blushsecrets.com/assets/logo.png" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://blushsecrets.com/services.html" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="canonical" href="https://blushsecrets.com/services.html" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css" />
@@ -21,13 +28,13 @@
     <a href="updates.html" class="link">Updates</a>
     <a href="contact.html" class="link">Contact</a>
     <a href="https://book.squareup.com/appointments/tynpor0v3xbdkt/location/LRH6GHQ8Q1H54" class="book desktop">Book Online</a>
-    <button class="menu-toggle" aria-label="Menu" onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
+    <button class="menu-toggle" aria-label="Menu" aria-controls="nav" aria-expanded="false" onclick="var n=document.getElementById('nav'); n.classList.toggle('open'); this.setAttribute('aria-expanded', n.classList.contains('open'));">☰</button>
   </nav>
 </header>
 
 <main>
-  <h2 class="section-title">Menu &amp; Price List</h2>
-  <p class="section-sub">Prices starting from — final pricing may vary by service</p>
+  <h1 class="section-title">Menu &amp; Price List</h1>
+  <p class="section-sub">Prices starting from — final pricing may vary by service. Book by category below.</p>
 
   <div class="pricecat">
     <h2>Makeup</h2>
@@ -38,6 +45,18 @@
     <div class="price-row"><span class="name">Eye Makeup</span><span class="price">$50</span></div>
     <div class="price-row"><span class="name">Eye Makeup + Lash Application</span><span class="price">$65</span></div>
     <div class="price-row"><span class="name">Glittery Eyes</span><span class="price">$55</span></div>
+    <div class="cat-book" data-cat="Makeup">
+      <!-- ═══ SQUARE BOOKING WIDGET · MAKEUP ══════════════════════════════════
+           Paste the "Makeup" Advanced Widget embed code from Square right here,
+           then DELETE the fallback <a> line just below it.
+           Get it: Square Dashboard → Appointments → Online Booking →
+           Advanced widget → Create New Widget → include ONLY the Makeup
+           services → Save → Copy widget embed code.
+           It looks like:
+           <script src='https://square.site/appointments/buyer/widget/LOCATION_ID/WIDGET_ID.js'></script>
+      -->
+      <a class="btn book-cat" href="https://book.squareup.com/appointments/tynpor0v3xbdkt/location/LRH6GHQ8Q1H54">Book a Makeup Appointment</a>
+    </div>
   </div>
 
   <div class="pricecat">
@@ -52,16 +71,41 @@
     <div class="price-row"><span class="name">Full Cheeks</span><span class="price">$12</span></div>
     <div class="price-row"><span class="name">Eyebrow + Upper Lip</span><span class="price">$19</span></div>
     <div class="price-row"><span class="name">Full Face Threading</span><span class="price">$40</span></div>
+    <div class="cat-book" data-cat="Threading">
+      <!-- ═══ SQUARE BOOKING WIDGET · THREADING ═══════════════════════════════
+           Paste the "Threading" Advanced Widget embed code from Square right
+           here, then DELETE the fallback <a> line just below it.
+           Get it: Square Dashboard → Appointments → Online Booking →
+           Advanced widget → Create New Widget → include ONLY the Threading
+           services → Save → Copy widget embed code.
+           It looks like:
+           <script src='https://square.site/appointments/buyer/widget/LOCATION_ID/WIDGET_ID.js'></script>
+      -->
+      <a class="btn book-cat" href="https://book.squareup.com/appointments/tynpor0v3xbdkt/location/LRH6GHQ8Q1H54">Book a Threading Appointment</a>
+    </div>
   </div>
 
   <div class="pricecat">
     <h2>Henna</h2>
     <div class="price-row"><span class="name">Henna Tattoo</span><span class="price">$25+</span></div>
     <div class="price-row"><span class="name">Indigo Application on Hair</span><span class="price">$50</span></div>
+    <div class="cat-book" data-cat="Henna">
+      <!-- ═══ SQUARE BOOKING WIDGET · HENNA ═══════════════════════════════════
+           Paste the "Henna" Advanced Widget embed code from Square right here,
+           then DELETE the fallback <a> line just below it.
+           Get it: Square Dashboard → Appointments → Online Booking →
+           Advanced widget → Create New Widget → include ONLY the Henna
+           services → Save → Copy widget embed code.
+           It looks like:
+           <script src='https://square.site/appointments/buyer/widget/LOCATION_ID/WIDGET_ID.js'></script>
+      -->
+      <a class="btn book-cat" href="https://book.squareup.com/appointments/tynpor0v3xbdkt/location/LRH6GHQ8Q1H54">Book a Henna Appointment</a>
+    </div>
   </div>
 
-  <div style="text-align:center; margin-top:40px;">
-    <a class="btn" href="https://book.squareup.com/appointments/tynpor0v3xbdkt/location/LRH6GHQ8Q1H54">Book Your Appointment</a>
+  <div class="cat-book" style="margin-top:44px;">
+    <p class="section-sub" style="margin-bottom:14px;">Prefer to browse the full list? You can also book any service in one place:</p>
+    <a class="btn outline" href="https://book.squareup.com/appointments/tynpor0v3xbdkt/location/LRH6GHQ8Q1H54">Book Any Service</a>
   </div>
 </main>
 

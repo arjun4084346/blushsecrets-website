@@ -94,6 +94,14 @@ main { max-width: var(--max); margin: 0 auto; padding: 56px 20px; }
 .price-row .desc { display: block; font-size: 13px; color: var(--muted); font-weight: 400; }
 .price-row .price { color: var(--gold-dark); font-weight: 600; white-space: nowrap; }
 
+/* Per-category booking action (under each price category) */
+.cat-book { margin-top: 20px; text-align: center; }
+.cat-book .book-cat { font-size: 15px; padding: 12px 28px; }
+/* Center whatever Square's embed injects (button / iframe / widget) */
+.cat-book iframe,
+.cat-book > div,
+.cat-book > .square-appointment-widget { margin-left: auto; margin-right: auto; }
+
 /* Gallery / video */
 .videos { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
 .video { position: relative; width: 260px; max-width: 100%; aspect-ratio: 9 / 16;

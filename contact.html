@@ -5,6 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Contact — Blush Secrets</title>
 <meta name="description" content="Contact Blush Secrets in Mountain View, CA. Call, WhatsApp, or send a message about makeup and eyebrow threading." />
+<meta property="og:title" content="Contact — Blush Secrets" />
+<meta property="og:description" content="Contact Blush Secrets in Mountain View, CA. Call, WhatsApp, or send a message about makeup and eyebrow threading." />
+<meta property="og:image" content="https://blushsecrets.com/assets/logo.png" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://blushsecrets.com/contact.html" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="canonical" href="https://blushsecrets.com/contact.html" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css" />
@@ -21,28 +28,60 @@
     <a href="updates.html" class="link">Updates</a>
     <a href="contact.html" class="link active">Contact</a>
     <a href="https://book.squareup.com/appointments/tynpor0v3xbdkt/location/LRH6GHQ8Q1H54" class="book desktop">Book Online</a>
-    <button class="menu-toggle" aria-label="Menu" onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
+    <button class="menu-toggle" aria-label="Menu" aria-controls="nav" aria-expanded="false" onclick="var n=document.getElementById('nav'); n.classList.toggle('open'); this.setAttribute('aria-expanded', n.classList.contains('open'));">☰</button>
   </nav>
 </header>
 
 <main>
-  <h2 class="section-title">Contact Us</h2>
+  <h1 class="section-title">Contact Us</h1>
   <p class="section-sub">Get in touch — we'd love to help</p>
 
   <div class="contact-grid">
     <div>
       <p>Do you need makeup for an upcoming special event? Interested in a makeup class to improve your daily look? Send us a message and let us know how we can help.</p>
 
-      <!-- The form posts to Formspree (free). Replace YOUR_FORM_ID after creating a form at formspree.io -->
-      <form class="contact" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <!-- ============================================================
+           MESSAGE FORM — no hosted form backend is connected yet.
+           The old action="https://formspree.io/f/YOUR_FORM_ID" was a
+           placeholder that was never replaced, so every submission was
+           silently lost. Until a real form service is set up, Send
+           opens the visitor's SMS app (or WhatsApp) with the message
+           pre-filled for 408-314-3670, so it always reaches us.
+           TO RESTORE A HOSTED FORM (steps in README.md "Contact form"):
+           create a form at https://formspree.io, then change the <form>
+           tag to
+             <form class="contact" action="https://formspree.io/f/REAL_ID" method="POST">
+           put back a single <button class="btn" type="submit">Send</button>,
+           and delete the contactVia() script below.
+           ============================================================ -->
+      <form class="contact" id="contact-form" onsubmit="return contactVia('sms');">
         <label for="name">Name*</label>
         <input id="name" name="name" required />
         <label for="email">Email*</label>
         <input id="email" type="email" name="email" required />
         <label for="msg">Message</label>
         <textarea id="msg" name="message" rows="4"></textarea>
-        <button class="btn" type="submit" style="border:0; cursor:pointer;">Send</button>
+        <button class="btn" type="submit" style="border:0; cursor:pointer;">Send as text (SMS)</button>
+        <button class="btn whatsapp" type="button" style="border:0; cursor:pointer; margin-left:8px;" onclick="contactVia('whatsapp');">Send on WhatsApp</button>
       </form>
+      <script>
+        function contactVia(how) {
+          var f = document.getElementById('contact-form');
+          if (!f.reportValidity()) return false;
+          var els = f.elements;
+          var msg = 'Hi Blush Secrets, this is ' + els['name'].value.trim() +
+                    ' (' + els['email'].value.trim() + ').' +
+                    (els['message'].value.trim() ? ' ' + els['message'].value.trim() : '');
+          var text = encodeURIComponent(msg);
+          if (how === 'whatsapp') {
+            window.open('https://wa.me/14083143670?text=' + text, '_blank');
+          } else {
+            // "?&body=" is the form both iOS and Android SMS apps accept
+            window.location.href = 'sms:+14083143670?&body=' + text;
+          }
+          return false;
+        }
+      </script>
     </div>
 
     <div>

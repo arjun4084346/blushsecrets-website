@@ -5,6 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Portfolio — Blush Secrets</title>
 <meta name="description" content="See our work: flawless eyebrows, makeup looks and videos from Blush Secrets in Mountain View, CA." />
+<meta property="og:title" content="Portfolio — Blush Secrets" />
+<meta property="og:description" content="See our work: flawless eyebrows, makeup looks and videos from Blush Secrets in Mountain View, CA." />
+<meta property="og:image" content="https://blushsecrets.com/assets/logo.png" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://blushsecrets.com/portfolio.html" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="canonical" href="https://blushsecrets.com/portfolio.html" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css" />
@@ -21,12 +28,12 @@
     <a href="updates.html" class="link">Updates</a>
     <a href="contact.html" class="link">Contact</a>
     <a href="https://book.squareup.com/appointments/tynpor0v3xbdkt/location/LRH6GHQ8Q1H54" class="book desktop">Book Online</a>
-    <button class="menu-toggle" aria-label="Menu" onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
+    <button class="menu-toggle" aria-label="Menu" aria-controls="nav" aria-expanded="false" onclick="var n=document.getElementById('nav'); n.classList.toggle('open'); this.setAttribute('aria-expanded', n.classList.contains('open'));">☰</button>
   </nav>
 </header>
 
 <main>
-  <h2 class="section-title">Portfolio</h2>
+  <h1 class="section-title">Portfolio</h1>
   <p class="section-sub">A look at our work — tap any photo to enlarge</p>
 
   <h3 class="gallery-title">Flawless Eyebrows</h3>
@@ -99,7 +106,7 @@
   document.getElementById('yr').textContent = new Date().getFullYear();
   var lb = document.getElementById('lightbox'), lbi = document.getElementById('lightbox-img');
   document.querySelectorAll('.gallery img').forEach(function (im) {
-    im.addEventListener('click', function () { lbi.src = im.src; lb.classList.add('open'); });
+    im.addEventListener('click', function () { lbi.src = im.src; lbi.alt = im.alt; lb.classList.add('open'); });
   });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape') lb.classList.remove('open'); });
 </script>

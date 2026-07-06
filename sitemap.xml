@@ -5,7 +5,9 @@
   <url><loc>https://blushsecrets.com/portfolio.html</loc><priority>0.8</priority></url>
   <url><loc>https://blushsecrets.com/contact.html</loc><priority>0.8</priority></url>
   <url><loc>https://blushsecrets.com/updates.html</loc><priority>0.5</priority></url>
-  <url><loc>https://blushsecrets.com/appointment.html</loc><priority>0.7</priority></url>
+  <!-- appointment.html is intentionally NOT listed: it is a meta-refresh
+       redirect stub (marked noindex) kept only so the old /appointment
+       link still works. -->
   <url><loc>https://blushsecrets.com/privacy.html</loc><priority>0.3</priority></url>
   <url><loc>https://blushsecrets.com/terms.html</loc><priority>0.3</priority></url>
 </urlset>

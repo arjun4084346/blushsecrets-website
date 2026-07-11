@@ -1,4 +1,4 @@
-# Blush Secrets — Website
+# Eyebrow Threading & Makeup — Website
 
 A fast, free static rebuild of eyebrowthreadingandmakeup.com. No monthly hosting fee — runs on GitHub Pages.
 Booking links out to your existing Square Appointments page, so nothing about bookings changes.

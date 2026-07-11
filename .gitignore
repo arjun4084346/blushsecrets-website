@@ -1,0 +1,17 @@
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Local Claude Code / editor config — never commit
+.claude/
+CLAUDE.local.md
+*.local.json
+.vscode/
+.idea/
+
+# Secrets — never commit
+.env
+.env.*
+*.pem
+*.key

@@ -28,16 +28,14 @@ Square contact form) and follow the comment above the `<form>` in `contact.html`
 form's `action` to the real endpoint, restore the single `Send` submit button, and delete
 the `contactVia()` script.
 
-## Google reviews widget (Trustindex)
-The homepage "Reviews" section currently shows only the heading and the "Read all reviews
-on Google" button — the empty placeholder `<div>` was removed because it rendered as a
-permanent blank gap. To install the widget:
-1. Sign up at https://www.trustindex.io (free plan).
-2. Connect Richa's Google Business Profile (search "Blush Secrets" / "Eyebrow Threading &
-   Makeup", Mountain View, CA).
-3. Build a "Google Reviews" widget and copy the `<script>` tag it gives you.
-4. In `index.html`, paste that `<script>` tag (wrapped in a plain `<div>`) where the
-   comment in the Reviews section says so.
+## Google reviews widget (Featurable)
+The homepage "Reviews" section shows a live Google Reviews carousel powered by
+[Featurable](https://featurable.com) (free plan), which auto-syncs from Richa's Google
+Business Profile — new reviews appear automatically, newest first, with no code change.
+The embed lives in `index.html` in the Reviews section: a
+`<div id="featurable-…" data-featurable-async></div>` plus Featurable's `bundle.js` script.
+To change the layout, sort order, or minimum-rating filter, edit the widget in the
+Featurable dashboard (nothing to redeploy). To swap providers, replace that div + script.
 
 ## Legal-page copies in `../website-legal/`
 `../website-legal/` holds standalone copies of the privacy/terms text (handy for pasting

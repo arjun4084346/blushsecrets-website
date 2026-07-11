@@ -1,6 +1,6 @@
 # Blush Secrets — Website
 
-A fast, free static rebuild of blushsecrets.com. No monthly hosting fee — runs on GitHub Pages.
+A fast, free static rebuild of eyebrowthreadingandmakeup.com. No monthly hosting fee — runs on GitHub Pages.
 Booking links out to your existing Square Appointments page, so nothing about bookings changes.
 
 ## Pages
@@ -13,7 +13,7 @@ Booking links out to your existing Square Appointments page, so nothing about bo
 - `contact.html` — Contact info + message form (see "Contact form" below)
 - `privacy.html`, `terms.html` — Legal pages (with the SMS clause Twilio needs)
 - `assets/style.css` — Shared styling
-- `CNAME` — Tells GitHub Pages to serve the site at blushsecrets.com
+- `CNAME` — Tells GitHub Pages to serve the site at eyebrowthreadingandmakeup.com
 
 ## Contact form
 There is currently **no hosted form backend**. The original build posted to
@@ -53,17 +53,20 @@ legal text, edit the website pages first, then refresh the copies.
 2. Repo → Settings → Pages → Source: `main` branch, root folder.
 3. GitHub Pages goes live at `https://<user>.github.io/...`, then the custom domain (below).
 
-## Point blushsecrets.com to GitHub Pages (done in GoDaddy DNS)
-In GoDaddy → Domain → DNS, set:
+## Point eyebrowthreadingandmakeup.com to GitHub Pages (done in Cloudflare DNS)
+In Cloudflare → your domain → **DNS → Records**, set (all records **DNS only / grey cloud**, not proxied):
 - Four **A** records for `@` →
   `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
-- One **CNAME** record for `www` → `<user>.github.io`
+- Four **AAAA** records for `@` →
+  `2606:50c0:8000::153`, `2606:50c0:8001::153`, `2606:50c0:8002::153`, `2606:50c0:8003::153`
+- One **CNAME** record for `www` → `arjun4084346.github.io`
 
-Then in GitHub Pages settings, enter `blushsecrets.com` as the custom domain and enable **Enforce HTTPS**.
+The `CNAME` file in this repo already tells GitHub Pages the custom domain. After DNS
+resolves, GitHub Pages settings will show the domain; then enable **Enforce HTTPS**.
 DNS changes can take a few minutes to a few hours to take effect.
 
-> Keep your GoDaddy **domain registration** (cheap, ~yearly). You only cancel the GoDaddy
-> **Website Builder** subscription ($21.99/mo) once the new site is verified live.
+> Keep the records **DNS only** (grey cloud) at least until GitHub has issued the HTTPS
+> certificate — Cloudflare's proxy can otherwise block GitHub's cert provisioning.
 
 ## To update text/photos later
 Edit the relevant `.html` file (or ask me). For photos, drop image files into `assets/`

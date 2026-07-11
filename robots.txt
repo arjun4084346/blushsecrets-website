@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://blushsecrets.com/sitemap.xml
+Sitemap: https://eyebrowthreadingandmakeup.com/sitemap.xml

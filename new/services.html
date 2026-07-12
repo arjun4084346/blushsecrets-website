@@ -33,7 +33,7 @@
       <a href="updates.html" class="link">Updates</a>
       <a href="contact.html" class="link">Contact</a>
     </div>
-    <a href="https://book.squareup.com/appointments/tynpor0v3xbdkt/location/LRH6GHQ8Q1H54" class="btn btn--sm book desktop">Book Online</a>
+    <a href="https://app.squareup.com/appointments/book/s7c36adf3567nz/LRH6GHQ8Q1H54/start" class="btn btn--sm book desktop">Book Online</a>
     <button class="menu-toggle" aria-label="Menu" aria-expanded="false" onclick="toggleMenu(this)">☰</button>
   </nav>
   <div class="mobile-drawer">
@@ -42,7 +42,7 @@
     <a href="portfolio.html">Portfolio</a>
     <a href="updates.html">Updates</a>
     <a href="contact.html">Contact</a>
-    <a href="https://book.squareup.com/appointments/tynpor0v3xbdkt/location/LRH6GHQ8Q1H54" class="btn">Book Online</a>
+    <a href="https://app.squareup.com/appointments/book/s7c36adf3567nz/LRH6GHQ8Q1H54/start" class="btn">Book Online</a>
   </div>
 </header>
 
@@ -78,7 +78,7 @@
              Online Booking → Advanced widget → create a Makeup-only widget → copy embed.)
              It looks like:
              <script src='https://square.site/appointments/buyer/widget/LOCATION_ID/WIDGET_ID.js'></script> -->
-        <a class="btn btn--sm book-cat" href="https://book.squareup.com/appointments/tynpor0v3xbdkt/location/LRH6GHQ8Q1H54">Book a Makeup Appointment</a>
+        <a class="btn btn--sm book-cat" href="https://app.squareup.com/appointments/book/s7c36adf3567nz/LRH6GHQ8Q1H54/start">Book a Makeup Appointment</a>
       </div>
     </section>
 
@@ -103,7 +103,7 @@
         <!-- ═══ SQUARE BOOKING WIDGET · THREADING ═══
              Paste the "Threading" Advanced Widget embed code here, then DELETE the
              fallback <a> line below. -->
-        <a class="btn btn--sm book-cat" href="https://book.squareup.com/appointments/tynpor0v3xbdkt/location/LRH6GHQ8Q1H54">Book a Threading Appointment</a>
+        <a class="btn btn--sm book-cat" href="https://app.squareup.com/appointments/book/s7c36adf3567nz/LRH6GHQ8Q1H54/start">Book a Threading Appointment</a>
       </div>
     </section>
 
@@ -120,21 +120,18 @@
         <!-- ═══ SQUARE BOOKING WIDGET · HENNA ═══
              Paste the "Henna" Advanced Widget embed code here, then DELETE the
              fallback <a> line below. -->
-        <a class="btn btn--sm book-cat" href="https://book.squareup.com/appointments/tynpor0v3xbdkt/location/LRH6GHQ8Q1H54">Book a Henna Appointment</a>
+        <a class="btn btn--sm book-cat" href="https://app.squareup.com/appointments/book/s7c36adf3567nz/LRH6GHQ8Q1H54/start">Book a Henna Appointment</a>
       </div>
     </section>
 
   </div>
 
   <div class="menu-foot" id="book">
-    <p class="sec-head" style="margin-bottom:18px; color:var(--ink-soft);">Ready to book? Pick your services and a time — right here.</p>
-    <!-- Square Appointments embeddable widget (all services). Renders a booking button
-         that opens the booking flow in an on-page overlay. Managed in Square →
-         Appointments → Online booking → Advanced widget. Fallback flow URL:
-         https://app.squareup.com/appointments/book/tynpor0v3xbdkt/LRH6GHQ8Q1H54/start -->
-    <div class="sq-book" style="display:flex; justify-content:center;">
-      <script src='https://app.squareup.com/appointments/buyer/widget/s7c36adf3567nz/LRH6GHQ8Q1H54.js'></script>
-    </div>
+    <p class="sec-head" style="margin-bottom:18px; color:var(--ink-soft);">Ready to book? Pick your services and a time in a few taps.</p>
+    <!-- On-brand gold button → the configured Square Advanced Widget booking flow
+         (all services, opens in a new tab via site.js). Square's embeddable script
+         only renders a blue link, so we use our own .btn styling instead. -->
+    <a class="btn" href="https://app.squareup.com/appointments/book/s7c36adf3567nz/LRH6GHQ8Q1H54/start">Book an Appointment</a>
   </div>
 </main>
 

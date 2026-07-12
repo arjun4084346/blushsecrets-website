@@ -473,3 +473,18 @@ html.js .reveal.d3 { transition-delay: .24s; }
   .hero__meta { gap: 12px; }
   .trust__grid { grid-template-columns: 1fr 1fr; }
 }
+
+/* ------------------------------------------------------------ booking modal */
+.booking-modal { position: fixed; inset: 0; z-index: 2000; display: none; }
+.booking-modal.open { display: block; }
+.booking-modal__backdrop { position: absolute; inset: 0; background: rgba(45,42,38,.62); }
+.booking-modal__panel { position: absolute; inset: 0; margin: auto; width: min(700px, 94vw);
+  height: min(90vh, 920px); background: #fff; border-radius: 16px; overflow: hidden;
+  box-shadow: 0 24px 70px rgba(0,0,0,.4); display: flex; flex-direction: column; }
+.booking-modal__bar { display: flex; align-items: center; justify-content: space-between;
+  padding: 11px 12px 11px 20px; background: var(--espresso, #2d2a26); color: #fff;
+  font-family: "Playfair Display", serif; font-size: 17px; }
+.booking-modal__close { width: 34px; height: 34px; border: 0; border-radius: 50%;
+  background: rgba(255,255,255,.16); color: #fff; cursor: pointer; font-size: 15px; line-height: 1; }
+.booking-modal__close:hover { background: rgba(255,255,255,.30); }
+.booking-modal__frame { flex: 1; width: 100%; border: 0; background: #fff; }

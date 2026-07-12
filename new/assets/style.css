@@ -295,7 +295,7 @@ section.band { padding: clamp(64px, 9vw, 108px) 0; }
 /* ============================================================ inner pages */
 .pagehead {
   position: relative; overflow: hidden; text-align: center; color: #fff;
-  padding: clamp(64px, 11vw, 128px) var(--gutter) clamp(52px, 8vw, 92px);
+  padding: clamp(40px, 6vw, 72px) var(--gutter) clamp(30px, 4.5vw, 56px);
   background: linear-gradient(120deg, var(--espresso), #4a3339 60%, #6a4650);
 }
 .pagehead::after {

@@ -126,9 +126,15 @@
 
   </div>
 
-  <div class="menu-foot">
-    <p class="sec-head" style="margin-bottom:18px; color:var(--ink-soft);">Prefer to browse the full list? Book any service in one place.</p>
-    <a class="btn" href="https://book.squareup.com/appointments/tynpor0v3xbdkt/location/LRH6GHQ8Q1H54">Book Any Service</a>
+  <div class="menu-foot" id="book">
+    <p class="sec-head" style="margin-bottom:18px; color:var(--ink-soft);">Ready to book? Pick your services and a time — right here.</p>
+    <!-- Square Appointments embeddable widget (all services). Renders a booking button
+         that opens the booking flow in an on-page overlay. Managed in Square →
+         Appointments → Online booking → Advanced widget. Fallback flow URL:
+         https://app.squareup.com/appointments/book/tynpor0v3xbdkt/LRH6GHQ8Q1H54/start -->
+    <div class="sq-book" style="display:flex; justify-content:center;">
+      <script src='https://app.squareup.com/appointments/buyer/widget/s7c36adf3567nz/LRH6GHQ8Q1H54.js'></script>
+    </div>
   </div>
 </main>
 

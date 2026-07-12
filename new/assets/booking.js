@@ -13,7 +13,8 @@
     '<div class="booking-modal__panel" role="dialog" aria-modal="true" aria-label="Book an appointment">' +
       '<div class="booking-modal__bar"><span>Book your appointment</span>' +
       '<button class="booking-modal__close" data-close aria-label="Close booking">✕</button></div>' +
-      '<iframe class="booking-modal__frame" title="Book an appointment" allow="payment"></iframe>' +
+      '<iframe class="booking-modal__frame" title="Book an appointment" allow="payment" ' +
+        'sandbox="allow-scripts allow-forms allow-same-origin allow-popups allow-modals allow-popups-to-escape-sandbox"></iframe>' +
     '</div>';
   document.body.appendChild(modal);
 

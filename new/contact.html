@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex,nofollow" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Contact — Eyebrow Threading &amp; Makeup</title>
+<meta name="description" content="Contact Eyebrow Threading &amp; Makeup in Mountain View, CA. Call, WhatsApp, or send a message about makeup and eyebrow threading." />
+<meta property="og:title" content="Contact — Eyebrow Threading &amp; Makeup" />
+<meta property="og:description" content="Contact Eyebrow Threading &amp; Makeup in Mountain View, CA. Call, WhatsApp, or send a message about makeup and eyebrow threading." />
+<meta property="og:image" content="https://eyebrowthreadingandmakeup.com/assets/logo.png" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://eyebrowthreadingandmakeup.com/contact.html" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="canonical" href="https://eyebrowthreadingandmakeup.com/contact.html" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css" />
+<link rel="icon" type="image/png" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+</head>
+<body>
+<header class="site">
+  <nav class="nav" id="nav">
+    <a href="index.html" class="brand"><img class="logo" src="assets/logo.png" alt="Eyebrow Threading &amp; Makeup logo"><span class="brand-txt">Eyebrow Threading &amp; Makeup</span></a>
+    <a href="index.html" class="link">Home</a>
+    <a href="services.html" class="link">Services</a>
+    <a href="portfolio.html" class="link">Portfolio</a>
+    <a href="updates.html" class="link">Updates</a>
+    <a href="contact.html" class="link active">Contact</a>
+    <a href="https://book.squareup.com/appointments/tynpor0v3xbdkt/location/LRH6GHQ8Q1H54" class="book desktop">Book Online</a>
+    <button class="menu-toggle" aria-label="Menu" aria-controls="nav" aria-expanded="false" onclick="var n=document.getElementById('nav'); n.classList.toggle('open'); this.setAttribute('aria-expanded', n.classList.contains('open'));">☰</button>
+  </nav>
+</header>
+
+<main>
+  <h1 class="section-title">Contact Us</h1>
+  <p class="section-sub">Get in touch — we'd love to help</p>
+
+  <div class="contact-grid">
+    <div>
+      <p>Do you need makeup for an upcoming special event? Interested in a makeup class to improve your daily look? Send us a message and let us know how we can help.</p>
+
+      <!-- ============================================================
+           MESSAGE FORM — no hosted form backend is connected yet.
+           The old action="https://formspree.io/f/YOUR_FORM_ID" was a
+           placeholder that was never replaced, so every submission was
+           silently lost. Until a real form service is set up, Send
+           opens the visitor's SMS app (or WhatsApp) with the message
+           pre-filled for 408-314-3670, so it always reaches us.
+           TO RESTORE A HOSTED FORM (steps in README.md "Contact form"):
+           create a form at https://formspree.io, then change the <form>
+           tag to
+             <form class="contact" action="https://formspree.io/f/REAL_ID" method="POST">
+           put back a single <button class="btn" type="submit">Send</button>,
+           and delete the contactVia() script below.
+           ============================================================ -->
+      <form class="contact" id="contact-form" onsubmit="return contactVia('sms');">
+        <label for="name">Name*</label>
+        <input id="name" name="name" required />
+        <label for="email">Email*</label>
+        <input id="email" type="email" name="email" required />
+        <label for="msg">Message</label>
+        <textarea id="msg" name="message" rows="4"></textarea>
+        <button class="btn" type="submit" style="border:0; cursor:pointer;">Send as text (SMS)</button>
+        <button class="btn whatsapp" type="button" style="border:0; cursor:pointer; margin-left:8px;" onclick="contactVia('whatsapp');">Send on WhatsApp</button>
+      </form>
+      <script>
+        function contactVia(how) {
+          var f = document.getElementById('contact-form');
+          if (!f.reportValidity()) return false;
+          var els = f.elements;
+          var msg = 'Hi Eyebrow Threading & Makeup, this is ' + els['name'].value.trim() +
+                    ' (' + els['email'].value.trim() + ').' +
+                    (els['message'].value.trim() ? ' ' + els['message'].value.trim() : '');
+          var text = encodeURIComponent(msg);
+          if (how === 'whatsapp') {
+            window.open('https://wa.me/14083143670?text=' + text, '_blank');
+          } else {
+            // "?&body=" is the form both iOS and Android SMS apps accept
+            window.location.href = 'sms:+14083143670?&body=' + text;
+          }
+          return false;
+        }
+      </script>
+    </div>
+
+    <div>
+      <p class="info-line"><strong>Call or text</strong>
+        <a href="tel:+14083143670">408-314-3670</a></p>
+
+      <p class="info-line"><strong>WhatsApp</strong>
+        <a href="https://wa.me/14083143670">+1 408-314-3670</a></p>
+
+      <p class="info-line"><strong>Follow &amp; reviews</strong>
+        <a href="https://instagram.com/richa_makeup_hair_styling">Instagram @richa_makeup_hair_styling</a><br>
+        <a href="https://share.google/nI614uqtiZaemlfVc">Read our reviews on Google</a></p>
+
+      <p class="info-line"><strong>Visit</strong>
+        Eyebrow Threading &amp; Makeup<br>
+        Inside Salon Finesse<br>732 Villa St, Mountain View, CA</p>
+
+      <p>
+        <a class="btn outline" href="https://www.google.com/maps/search/?api=1&query=732+Villa+St+Mountain+View+CA">Get Directions</a>
+      </p>
+      <p style="margin-top:14px;">
+        <a class="btn whatsapp" href="https://wa.me/14083143670">Message us on WhatsApp</a>
+      </p>
+    </div>
+  </div>
+</main>
+
+<footer class="site">
+  <div class="fwrap">
+    <div><h4>Eyebrow Threading &amp; Makeup</h4><p>Inside Salon Finesse<br>732 Villa St, Mountain View, CA</p></div>
+    <div><h4>Contact</h4><p><a href="tel:+14083143670">408-314-3670</a><br><a href="https://wa.me/14083143670">WhatsApp us</a><br><a href="https://instagram.com/richa_makeup_hair_styling">Instagram</a><br><a href="https://share.google/nI614uqtiZaemlfVc">Reviews on Google</a></p></div>
+    <div><h4>Explore</h4><p><a href="services.html">Services</a><br><a href="portfolio.html">Portfolio</a><br><a href="contact.html">Contact</a><br><a href="sms-signup.html">Text sign-up</a><br><a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></p></div>
+  </div>
+  <div class="copy">© <span id="yr"></span> Eyebrow Threading &amp; Makeup — All Rights Reserved.</div>
+</footer>
+<script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+</body>
+</html>

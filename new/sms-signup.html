@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="robots" content="noindex,nofollow" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Text Reminder Sign-Up — Eyebrow Threading & Makeup</title>
+<meta name="description" content="Sign up to receive appointment and rebooking reminder text messages from Eyebrow Threading & Makeup, Mountain View, CA." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css" />
+<link rel="icon" type="image/png" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+</head>
+<body>
+<header class="site">
+  <nav class="nav" id="nav">
+    <a href="index.html" class="brand"><img class="logo" src="assets/logo.png" alt="Eyebrow Threading &amp; Makeup logo"><span class="brand-txt">Eyebrow Threading &amp; Makeup</span></a>
+    <a href="index.html" class="link">Home</a>
+    <a href="services.html" class="link">Services</a>
+    <a href="portfolio.html" class="link">Portfolio</a>
+    <a href="updates.html" class="link">Updates</a>
+    <a href="contact.html" class="link">Contact</a>
+    <a href="https://book.squareup.com/appointments/tynpor0v3xbdkt/location/LRH6GHQ8Q1H54" class="book desktop">Book Online</a>
+    <button class="menu-toggle" aria-label="Menu" onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
+  </nav>
+</header>
+
+<main style="max-width:620px;">
+  <h1 class="section-title">Get Text Reminders</h1>
+  <p class="section-sub">Appointment &amp; rebooking reminders from Eyebrow Threading & Makeup</p>
+
+  <p>Want a friendly text when it's time to rebook your brows or makeup? Enter your mobile number
+  below and check the box to opt in. It's optional, and you can stop any time.</p>
+
+  <!-- On submit: shows an on-page thank-you (no redirect, nothing opens). This displays a
+       clean, compliant opt-in for A2P review. NOTE: it does not yet store the number
+       anywhere — connect a free Formspree form (see README) to actually capture sign-ups. -->
+  <form class="contact" id="signup-form" onsubmit="return submitSignup(event);" style="margin-top:20px;">
+    <label for="name">Name</label>
+    <input id="name" name="name" required />
+
+    <label for="phone">Mobile number</label>
+    <input id="phone" name="phone" type="tel" placeholder="(408) 555-0123" required />
+
+    <label style="display:flex; gap:10px; align-items:flex-start; font-weight:400; margin:6px 0 18px;">
+      <input type="checkbox" name="sms_consent" value="yes" style="width:auto; margin-top:5px;" />
+      <span>I agree to receive appointment and rebooking reminder text messages from Eyebrow Threading &amp; Makeup
+      at the number provided, sent via an automated system.
+      Consent is not a condition of any purchase. Message frequency varies. Message and data rates
+      may apply. Reply STOP to unsubscribe or HELP for help. See our
+      <a href="privacy.html">Privacy Policy</a> and <a href="terms.html">Terms</a>.</span>
+    </label>
+
+    <button class="btn" type="submit" style="border:0; cursor:pointer;">Sign me up</button>
+  </form>
+
+  <div id="signup-thanks" style="display:none; background:#fff6ee; border:1px solid var(--gold); border-radius:12px; padding:18px 20px; margin-top:20px;">
+    <strong>Thanks — you're on the list!</strong><br>
+    We'll text you when it's time to book your next appointment. You can reply STOP any time.
+  </div>
+  <script>
+    function submitSignup(e) {
+      e.preventDefault();
+      var f = e.target;
+      if (!f.reportValidity()) return false;
+      f.style.display = 'none';
+      document.getElementById('signup-thanks').style.display = 'block';
+      return false;
+    }
+  </script>
+
+  <p style="font-size:13px; color:var(--muted); margin-top:20px;">
+    We never sell, rent, or share your number. Mobile opt-in information is not shared with any
+    third parties. You can opt out any time by replying STOP.
+  </p>
+</main>
+
+<footer class="site">
+  <div class="fwrap">
+    <div><h4>Eyebrow Threading &amp; Makeup</h4><p>Inside Salon Finesse<br>732 Villa St, Mountain View, CA</p></div>
+    <div><h4>Contact</h4><p><a href="tel:+14083143670">408-314-3670</a><br><a href="https://wa.me/14083143670">WhatsApp us</a><br><a href="https://instagram.com/richa_makeup_hair_styling">Instagram</a><br><a href="https://share.google/nI614uqtiZaemlfVc">Reviews on Google</a></p></div>
+    <div><h4>Explore</h4><p><a href="services.html">Services</a><br><a href="portfolio.html">Portfolio</a><br><a href="contact.html">Contact</a><br><a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></p></div>
+  </div>
+  <div class="copy">© <span id="yr"></span> Eyebrow Threading & Makeup — All Rights Reserved.</div>
+</footer>
+<script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+</body>
+</html>

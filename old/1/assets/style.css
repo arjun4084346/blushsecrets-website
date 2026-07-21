@@ -1,0 +1,167 @@
+/* Eyebrow Threading & Makeup — shared styles */
+:root {
+  --gold: #caa781;
+  --gold-dark: #a9855f;
+  --ink: #2d2a26;
+  --muted: #7a726a;
+  --cream: #faf6f1;
+  --card: #ffffff;
+  --line: #ece4da;
+  --blush: #d98b9a;
+  --max: 1080px;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: var(--ink);
+  background: var(--cream);
+  line-height: 1.65;
+}
+h1, h2, h3, .brand { font-family: "Playfair Display", Georgia, serif; font-weight: 600; }
+a { color: var(--gold-dark); }
+img { max-width: 100%; display: block; }
+
+/* Header / nav */
+header.site {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(250, 246, 241, 0.95);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+}
+.nav {
+  max-width: var(--max); margin: 0 auto; padding: 14px 20px;
+  display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+}
+.brand {
+  color: var(--ink); text-decoration: none; letter-spacing: .5px;
+  margin-right: auto; display: flex; flex-direction: row; align-items: center; gap: 10px;
+}
+.brand .logo { width: 42px; height: 42px; border-radius: 50%; object-fit: cover; flex: none; background: #fff; }
+.brand-txt { display: flex; flex-direction: column; line-height: 1.1; font-size: 22px; }
+.brand small { font-family: "Poppins", sans-serif; font-size: 11px; color: var(--muted);
+  letter-spacing: 2px; text-transform: uppercase; font-weight: 400; }
+.nav a.link {
+  text-decoration: none; color: var(--ink); font-size: 14px; padding: 6px 4px;
+  border-bottom: 2px solid transparent;
+}
+.nav a.link:hover, .nav a.link.active { border-bottom-color: var(--gold); color: var(--gold-dark); }
+.nav .book {
+  background: var(--gold); color: #fff; padding: 9px 16px; border-radius: 999px;
+  text-decoration: none; font-size: 14px; font-weight: 500;
+}
+.nav .book:hover { background: var(--gold-dark); }
+.menu-toggle { display: none; background: none; border: 0; font-size: 24px; cursor: pointer; color: var(--ink); }
+
+/* Hero */
+.hero {
+  background: linear-gradient(135deg, #f3e7db 0%, #e8d3bf 55%, #dcbfa4 100%);
+  text-align: center; padding: 92px 20px;
+}
+.hero h1 { font-size: clamp(34px, 6vw, 60px); margin: 0 0 10px; color: #4a3f34; }
+.hero p { font-size: 18px; color: #6a5b4b; margin: 0 0 26px; }
+.btn {
+  display: inline-block; background: var(--gold); color: #fff; text-decoration: none;
+  padding: 14px 30px; border-radius: 999px; font-weight: 500; font-size: 16px;
+  transition: background .2s, transform .2s;
+}
+.btn:hover { background: var(--gold-dark); transform: translateY(-1px); }
+.btn.outline { background: transparent; color: var(--gold-dark); border: 1.5px solid var(--gold); }
+
+/* Layout */
+main { max-width: var(--max); margin: 0 auto; padding: 56px 20px; }
+.section-title { text-align: center; font-size: 32px; margin: 0 0 8px; }
+.section-sub { text-align: center; color: var(--muted); margin: 0 0 40px; }
+.grid { display: grid; gap: 24px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+.card {
+  background: var(--card); border: 1px solid var(--line); border-radius: 16px;
+  padding: 26px; box-shadow: 0 4px 18px rgba(120, 90, 60, .05);
+}
+.card h3 { margin: 0 0 8px; font-size: 20px; }
+.card p { margin: 0; color: var(--muted); }
+
+/* Price list */
+.pricecat { margin-bottom: 40px; }
+.pricecat h2 { font-size: 26px; color: var(--gold-dark); border-bottom: 2px solid var(--line);
+  padding-bottom: 8px; margin-bottom: 6px; }
+.price-row {
+  display: flex; justify-content: space-between; align-items: baseline; gap: 16px;
+  padding: 12px 2px; border-bottom: 1px dashed var(--line);
+}
+.price-row .name { font-weight: 500; }
+.price-row .desc { display: block; font-size: 13px; color: var(--muted); font-weight: 400; }
+.price-row .price { color: var(--gold-dark); font-weight: 600; white-space: nowrap; }
+
+/* Per-category booking action (under each price category) */
+.cat-book { margin-top: 20px; text-align: center; }
+.cat-book .book-cat { font-size: 15px; padding: 12px 28px; }
+/* Center whatever Square's embed injects (button / iframe / widget) */
+.cat-book iframe,
+.cat-book > div,
+.cat-book > .square-appointment-widget { margin-left: auto; margin-right: auto; }
+
+/* Gallery / video */
+.videos { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
+.video { position: relative; width: 260px; max-width: 100%; aspect-ratio: 9 / 16;
+  border-radius: 14px; overflow: hidden; border: 1px solid var(--line); background: #000; }
+.video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.placeholder-note {
+  background: #fff6ee; border: 1px dashed var(--gold); border-radius: 12px;
+  padding: 16px 18px; color: var(--muted); font-size: 14px;
+}
+.gallery-title { text-align: center; font-size: 26px; color: var(--gold-dark); margin: 40px 0 18px; }
+.gallery { display: grid; gap: 10px; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); }
+.gallery img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 10px;
+  cursor: pointer; background: #efe7de; transition: transform .2s; }
+.gallery img:hover { transform: scale(1.02); }
+.lightbox { position: fixed; inset: 0; background: rgba(0,0,0,.9); display: none;
+  align-items: center; justify-content: center; z-index: 100; padding: 20px; cursor: zoom-out; }
+.lightbox.open { display: flex; }
+.lightbox img { max-width: 100%; max-height: 100%; border-radius: 8px; }
+
+/* Contact */
+.contact-grid { display: grid; gap: 32px; grid-template-columns: 1fr 1fr; }
+.info-line { margin: 0 0 14px; }
+.info-line strong { display: block; font-size: 13px; text-transform: uppercase; letter-spacing: 1px;
+  color: var(--muted); margin-bottom: 2px; }
+form.contact label { display: block; font-size: 14px; margin: 0 0 4px; font-weight: 500; }
+form.contact input, form.contact textarea {
+  width: 100%; padding: 11px 13px; border: 1px solid var(--line); border-radius: 10px;
+  font: inherit; margin-bottom: 16px; background: #fff;
+}
+.whatsapp { background: #25D366; color: #fff; }
+.whatsapp:hover { background: #1eb457; }
+
+/* Notice banner */
+.notice {
+  background: #fff; border: 1px solid var(--gold); border-left: 5px solid var(--gold);
+  border-radius: 12px; padding: 22px 24px; max-width: 640px; margin: 0 auto; text-align: center;
+}
+
+/* Legal pages */
+.legal { max-width: 760px; }
+.legal h2 { font-size: 20px; margin-top: 28px; }
+.legal .updated { color: var(--muted); font-size: 14px; }
+
+/* Footer */
+footer.site {
+  background: #4a3f34; color: #e9ddce; margin-top: 40px; padding: 40px 20px;
+}
+footer.site .fwrap { max-width: var(--max); margin: 0 auto; display: grid; gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+footer.site a { color: #f0e4d5; text-decoration: none; }
+footer.site a:hover { text-decoration: underline; }
+footer.site h4 { font-family: "Playfair Display", serif; margin: 0 0 10px; color: #fff; }
+footer.site .copy { max-width: var(--max); margin: 24px auto 0; padding-top: 16px;
+  border-top: 1px solid rgba(255,255,255,.15); font-size: 13px; color: #c9bba9; }
+
+@media (max-width: 720px) {
+  .nav .link, .nav .book.desktop { display: none; }
+  .menu-toggle { display: block; }
+  .nav.open { flex-direction: column; align-items: flex-start; }
+  .nav.open .link { display: block; width: 100%; }
+  .nav.open .book { display: inline-block; }
+  .contact-grid { grid-template-columns: 1fr; }
+}

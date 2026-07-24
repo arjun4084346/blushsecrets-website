@@ -12,6 +12,7 @@
 <meta property="og:url" content="https://eyebrowthreadingandmakeup.com/" />
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="canonical" href="https://eyebrowthreadingandmakeup.com/" />
+<link rel="preload" as="image" href="assets/portfolio/face-16.jpg" fetchpriority="high" />
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -245,7 +246,9 @@
          Google Business Profile. Managed at featurable.com (see README → Google reviews widget). -->
     <div class="reviews-wrap reveal">
       <div id="featurable-d2a18437-1b02-4cb6-8a84-afdbd6755f6d" data-featurable-async></div>
-      <script src="https://featurable.com/assets/bundle.js" defer charset="UTF-8"></script>
+      <!-- The Featurable bundle is injected by assets/site.js only when this section
+           nears the viewport, so the third-party script doesn't slow initial load.
+           The review count/rating shown above is independent (direct API call). -->
     </div>
     <div class="center" style="margin-top:28px;">
       <a class="btn btn--ghost" href="https://share.google/nI614uqtiZaemlfVc">Read all reviews on Google</a>
@@ -332,6 +335,6 @@
   }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
   document.querySelectorAll('.reveal:not(.in)').forEach(function (el) { io.observe(el); });
 </script>
-<script src="assets/site.js?v=2"></script>
+<script src="assets/site.js?v=3"></script>
 </body>
 </html>

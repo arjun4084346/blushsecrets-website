@@ -35,3 +35,31 @@
     })
     .catch(function () { /* keep the static fallback */ });
 })();
+
+/* Lazy-load the Featurable reviews widget: the third-party bundle is only fetched
+   once the reviews section nears the viewport, keeping it off the critical path.
+   The review count/rating above is independent — it calls the API directly. */
+(function () {
+  var host = document.querySelector('[data-featurable-async]');
+  if (!host) return;
+  var loaded = false;
+  function load() {
+    if (loaded) return;
+    loaded = true;
+    var s = document.createElement('script');
+    s.src = 'https://featurable.com/assets/bundle.js';
+    s.setAttribute('charset', 'UTF-8');
+    s.defer = true;
+    document.body.appendChild(s);
+  }
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      for (var i = 0; i < entries.length; i++) {
+        if (entries[i].isIntersecting) { load(); io.disconnect(); break; }
+      }
+    }, { rootMargin: '600px 0px' });
+    io.observe(host);
+  } else {
+    load();
+  }
+})();

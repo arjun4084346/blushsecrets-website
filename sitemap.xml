@@ -2,20 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://eyebrowthreadingandmakeup.com/</loc><priority>1.0</priority></url>
   <url><loc>https://eyebrowthreadingandmakeup.com/services.html</loc><priority>0.9</priority></url>
-  <url><loc>https://eyebrowthreadingandmakeup.com/portfolio.html</loc><priority>0.8</priority></url>
-  <url><loc>https://eyebrowthreadingandmakeup.com/contact.html</loc><priority>0.8</priority></url>
-  <url><loc>https://eyebrowthreadingandmakeup.com/updates.html</loc><priority>0.5</priority></url>
-&
   <url><loc>https://eyebrowthreadingandmakeup.com/threading.html</loc><priority>0.8</priority></url>
   <url><loc>https://eyebrowthreadingandmakeup.com/makeup.html</loc><priority>0.8</priority></url>
   <url><loc>https://eyebrowthreadingandmakeup.com/henna.html</loc><priority>0.8</priority></url>
+  <url><loc>https://eyebrowthreadingandmakeup.com/portfolio.html</loc><priority>0.8</priority></url>
+  <url><loc>https://eyebrowthreadingandmakeup.com/contact.html</loc><priority>0.8</priority></url>
+  <url><loc>https://eyebrowthreadingandmakeup.com/faq.html</loc><priority>0.7</priority></url>
   <url><loc>https://eyebrowthreadingandmakeup.com/blog.html</loc><priority>0.6</priority></url>
+  <url><loc>https://eyebrowthreadingandmakeup.com/updates.html</loc><priority>0.5</priority></url>
   <url><loc>https://eyebrowthreadingandmakeup.com/threading-aftercare.html</loc><priority>0.5</priority></url>
   <url><loc>https://eyebrowthreadingandmakeup.com/threading-vs-waxing.html</loc><priority>0.5</priority></url>
   <url><loc>https://eyebrowthreadingandmakeup.com/bridal-makeup-prep.html</loc><priority>0.5</priority></url>
   <!-- appointment.html is intentionally NOT listed: it is a meta-refresh
-       redirect stub (marked noindex) kept only so the old /appointment
-       link still works. -->
+       redirect stub (marked noindex) kept only so the old /appointment link works. -->
   <url><loc>https://eyebrowthreadingandmakeup.com/privacy.html</loc><priority>0.3</priority></url>
   <url><loc>https://eyebrowthreadingandmakeup.com/terms.html</loc><priority>0.3</priority></url>
 </urlset>
